@@ -7,6 +7,7 @@ mount /dev/nvme1n1p5 /mnt
 mkdir /mnt/boot
 mount /dev/nvme1n1p1 /mnt/boot
 
+sed -i '/# Last Check/a Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch' /etc/pacman.d/mirrorlist
 pacstrap /mnt base base-devel linux linux-firmware 
 
 swapon /dev/nvme1n1p4
