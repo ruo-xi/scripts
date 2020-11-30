@@ -3,6 +3,8 @@ mkdir software
 mkdir software/source
 
 git clone https://github.com/ruo-xi/.config.git
+# config git
+sh ~/scripts/install/software/git.sh
 
 sh ~/scripts/install/software/go.sh
 sh ~/scripts/install/software/yay.sh
@@ -41,10 +43,7 @@ yay -S ttf-sybola
 
 # pictures
 mkdir ~/store
-git clone https://github.com/ruo-xi/picture
-
-# config git
-sh ~/scripts/install/software/git.sh
+git clone git@github.com:ruo-xi/picture
 
 # windows manager and terminal 
 sh ~/scripts/install/software/suckless.sh

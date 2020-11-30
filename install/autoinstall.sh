@@ -23,5 +23,4 @@ useradd -m -G wheel yu
 passwd yu
 sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/g' /etc/sudoers
 
-mv /scripts /home/yu/
 

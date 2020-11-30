@@ -1,7 +1,7 @@
 cd ~/software/source
 
-git clone https://github.com/ruo-xi/dwm.git
-git clone https://github.com/ruo-xi/st.git
+git clone git@github.com:ruo-xi/dwm.git
+git clone git@github.com:ruo-xi/st.git
 cd dwm
 git checkout mydwm
 sudo make install clean
