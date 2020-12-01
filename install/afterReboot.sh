@@ -1,12 +1,11 @@
+cd ~
 mkdir software
 mkdir software/source
 
 git clone https://github.com/ruo-xi/.config.git
 # config git
-echo cao19981128 | sudo -S pacman -S openssh << EOF
-y
-EOF
-sh /scripts/install/software/git.sh
+sudo -S pacman -S openssh
+
 
 sh /scripts/install/software/go.sh
 sh /scripts/install/software/yay.sh
@@ -34,6 +33,9 @@ export http_proxy="127.0.0.1:8888"
 
 # fonts
 yay -S nerd-fonts-source-code-pro wqy-zenhei ttf-sybola
+# git config
+sh /scripts/install/software/git.sh
+
 # pictures
 mkdir ~/store
 git clone git@github.com:ruo-xi/picture
