@@ -12,21 +12,15 @@ sh /scripts/install/software/go.sh
 sh /scripts/install/software/yay.sh
 
 # python
-yay -S python2 python python2-pip python-pip << EOF
-y
-EOF
+echo y | yay -S python2 python python2-pip python-pip
 
 # nodejs
-yay -S nodejs npm << EOF
-y
-EOF
+echo y | yay -S nodejs npm
 
 # java
-yay -S jdk11-openjdk
+echo y | yay -S jdk11-openjdk
 
-yay -S nvidia xorg chromium v2ray xorg-xinit picom << EOF
-y
-EOF
+echo y | yay -S nvidia xorg chromium v2ray xorg-xinit picom
 
 sudo mv /etc/X11/xinit/xinitrc ~/xinitrc
 sed -i '/xterm/d' ~/.xinitrc
@@ -40,9 +34,7 @@ export https_proxy="127.0.0.1:8888"
 export http_proxy="127.0.0.1:8888"
 
 # fonts
-yay -S nerd-fonts-source-code-pro wqy-zenhei ttf-sybola << EOF
-y
-EOF
+echo y | yay -S nerd-fonts-source-code-pro wqy-zenhei ttf-sybola
 # pictures
 mkdir ~/store
 git clone git@github.com:ruo-xi/picture
@@ -57,21 +49,13 @@ sh /scripts/install/software/zsh.sh
 # fuzzy finder
 sh /scripts/install/software/fzf.sh
 # file finder
-yay -S fd << EOF
-y
-EOF
+echo y | yay -S fd
 # text line finder
-yay -S ripgrep << EOF
-y
-EOF
+echo y | yay -S ripgrep 
 # output to screen from input
-yay -S ccat << EOF
-y
-EOF
+echo y | yay -S ccat 
 # audio tools
-yay -S alsa-utils << EOF
-y
-EOF
+echo y | yay -S alsa-utils 
 
 sed -i '/chromium/d' ~/xinitrc
 
