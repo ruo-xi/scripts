@@ -12,23 +12,14 @@ sh /scripts/install/software/go.sh
 sh /scripts/install/software/yay.sh
 
 # python
-echo y | yay -S python2 
-echo y | yay -S python2-pip
-echo y | yay -S python
-echo y | yay -S pyhton-pip
+yay -S python2 python2-pip python pyhton-pip
 # nodejs
-echo y | yay -S nodejs 
-echo y | yay -S npm
+yay -S nodejs npm
 
 # java
-echo y | yay -S jdk11-openjdk
+yay -S jdk11-openjdk
 
-echo y | yay -S nvidia 
-echo y | yay -S xorg 
-echo y | yay -S chromium 
-echo y | yay -S v2ray 
-echo y | yay -S xorg-xinit 
-echo y | yay -S picom
+yay -S nvidia xorg chromium x2raya xorg-xinit picom
 
 sudo mv /etc/X11/xinit/xinitrc ~/xinitrc
 sed -i '/xterm/d' ~/.xinitrc
@@ -42,7 +33,7 @@ export https_proxy="127.0.0.1:8888"
 export http_proxy="127.0.0.1:8888"
 
 # fonts
-echo y | yay -S nerd-fonts-source-code-pro wqy-zenhei ttf-sybola
+yay -S nerd-fonts-source-code-pro wqy-zenhei ttf-sybola
 # pictures
 mkdir ~/store
 git clone git@github.com:ruo-xi/picture
@@ -57,13 +48,13 @@ sh /scripts/install/software/zsh.sh
 # fuzzy finder
 sh /scripts/install/software/fzf.sh
 # file finder
-echo y | yay -S fd
+yay -S fd
 # text line finder
-echo y | yay -S ripgrep 
+yay -S ripgrep 
 # output to screen from input
-echo y | yay -S ccat 
+yay -S ccat 
 # audio tools
-echo y | yay -S alsa-utils 
+yay -S alsa-utils 
 
 sed -i '/chromium/d' ~/xinitrc
 
