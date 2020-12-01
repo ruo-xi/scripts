@@ -12,15 +12,23 @@ sh /scripts/install/software/go.sh
 sh /scripts/install/software/yay.sh
 
 # python
-echo y | yay -S python2 python python2-pip python-pip
-
+echo y | yay -S python2 
+echo y | yay -S python2-pip
+echo y | yay -S python
+echo y | yay -S pyhton-pip
 # nodejs
-echo y | yay -S nodejs npm
+echo y | yay -S nodejs 
+echo y | yay -S npm
 
 # java
 echo y | yay -S jdk11-openjdk
 
-echo y | yay -S nvidia xorg chromium v2ray xorg-xinit picom
+echo y | yay -S nvidia 
+echo y | yay -S xorg 
+echo y | yay -S chromium 
+echo y | yay -S v2ray 
+echo y | yay -S xorg-xinit 
+echo y | yay -S picom
 
 sudo mv /etc/X11/xinit/xinitrc ~/xinitrc
 sed -i '/xterm/d' ~/.xinitrc
@@ -29,7 +37,7 @@ sed -i '/twm/d' ~/.xinitrc
 echo 'chromium' >> ~/.xinitrc
 startx
 
-# start proxy
+# expory proxy
 export https_proxy="127.0.0.1:8888"
 export http_proxy="127.0.0.1:8888"
 
