@@ -14,13 +14,21 @@ echo '127.0.0.1 yu
 127.0.0.1 yu
 127.0.0.0 yu' >> hostname
 
-passwd
+passwd << EOF
+cao19981128
+cao19981128
+EOF
 
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
 useradd -m -G wheel yu
-passwd yu
+passwd yu << EOF
+cao19981128
+cao19981128
+EOF
+
 sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/g' /etc/sudoers
 
 sudo systemctl enable --now NetworkManager
+

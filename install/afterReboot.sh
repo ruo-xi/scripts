@@ -4,10 +4,10 @@ mkdir software/source
 
 git clone https://github.com/ruo-xi/.config.git
 # config git
-sh ~/scripts/install/software/git.sh
+sh /scripts/install/software/git.sh
 
-sh ~/scripts/install/software/go.sh
-sh ~/scripts/install/software/yay.sh
+sh /scripts/install/software/go.sh
+sh /scripts/install/software/yay.sh
 
 # python
 yay -S python2
@@ -46,15 +46,15 @@ mkdir ~/store
 git clone git@github.com:ruo-xi/picture
 
 # windows manager and terminal 
-sh ~/scripts/install/software/suckless.sh
+sh /scripts/install/software/suckless.sh
 # file manager 
-sh ~/scripts/install/software/ranger.sh
+sh /scripts/install/software/ranger.sh
 # text editor
-sh ~/scripts/install/software/neovim.sh
+sh /scripts/install/software/neovim.sh
 # shell
-sh ~/scripts/install/software/zsh.sh
+sh /scripts/install/software/zsh.sh
 # fuzzy finder
-sh ~/scripts/install/software/fzf.sh
+sh /scripts/install/software/fzf.sh
 # file finder
 yay -S fd
 # text line finder
