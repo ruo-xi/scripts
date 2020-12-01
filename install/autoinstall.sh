@@ -2,12 +2,14 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc
 timedatectl set-local-rtc true # 是archlinux 使用CST时间 避免因为使用UTC与windows 冲突
 
-pacman -S wpa_supplicant networkmanager ntfs-3g os-prober grub efibootmgr dhcpcd man man-db git
+pacman -S wpa_supplicant networkmanager ntfs-3g os-prober grub efibootmgr dhcpcd man man-db git << EOF
+y
+EOF
 
 sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
 sed -i 's/#zh_CN.UTF-8 UTF-8/zh-CN.UTF_8 UTF-8/g' /etc/locale.gen
 locale-gen
-echo 'LANG=en_US.UTF-8' /etc/locale.conf
+echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 
 echo yu /etc/hostname
 echo '127.0.0.1 yu
