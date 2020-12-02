@@ -5,7 +5,7 @@ mkdir software/source
 git clone https://github.com/ruo-xi/.config.git
 # config git
 sudo -S pacman -S openssh
-
+ssh-keygen -t rsa -C "314386327@qq.com"
 
 sh /scripts/install/software/go.sh
 sh /scripts/install/software/yay.sh
@@ -18,9 +18,9 @@ yay -S nodejs npm
 # java
 yay -S jdk11-openjdk
 
-yay -S nvidia xorg chromium x2raya xorg-xinit picom
+yay -S nvidia xorg chromium v2raya xorg-xinit picom
 
-sudo mv /etc/X11/xinit/xinitrc ~/xinitrc
+sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc
 sed -i '/xterm/d' ~/.xinitrc
 sed -i '/xclock/d' ~/.xinitrc
 sed -i '/twm/d' ~/.xinitrc

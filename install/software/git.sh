@@ -1,4 +1,3 @@
-echo 'cao19981128' | sudo ln -s /home/yu/.config/ssh /home/yu/.ssh
 git config --global user.name ruo-xi
 git config --global user.email 314386327@qq.com
 
