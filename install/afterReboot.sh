@@ -5,13 +5,15 @@ mkdir software/source
 git clone https://github.com/ruo-xi/.config.git
 # config git
 sudo -S pacman -S openssh
-ssh-keygen -t rsa -C "314386327@qq.com"
+sudo ln -sf ~/.config.ssh ~/.ssh
+sudo chmod 400 ~/.ssh/id_rsa
+sudo chmod 600 ~/.ssh/id_rsa.pub
 
 sh /scripts/install/software/go.sh
 sh /scripts/install/software/yay.sh
 
 # python
-yay -S python2 python2-pip python pyhton-pip
+yay -S python2 python2-pip python python-pip
 # nodejs
 yay -S nodejs npm
 
@@ -32,13 +34,13 @@ export https_proxy="127.0.0.1:8888"
 export http_proxy="127.0.0.1:8888"
 
 # fonts
-yay -S nerd-fonts-source-code-pro wqy-zenhei ttf-sybola
+yay -S nerd-fonts-source-code-pro wqy-zenhei ttf-symbola
 # git config
 sh /scripts/install/software/git.sh
 
 # pictures
 mkdir ~/store
-git clone git@github.com:ruo-xi/picture
+git clone git@github.com:ruo-xi/picture ~/store/
 # windows manager and terminal 
 sh /scripts/install/software/suckless.sh
 # file manager 

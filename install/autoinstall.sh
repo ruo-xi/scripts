@@ -12,7 +12,7 @@ echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 echo yu > /etc/hostname
 echo '127.0.0.1 yu
 127.0.0.1 yu
-127.0.0.0 yu' >> hostname
+127.0.0.0 yu' >> /etc/hosts
 
 passwd << EOF
 cao19981128
