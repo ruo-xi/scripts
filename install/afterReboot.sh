@@ -59,6 +59,14 @@ yay -S ripgrep
 yay -S ccat 
 # audio tools
 yay -S alsa-utils 
+# app launcher
+yay -S rofi
+# audio 
+yay -S pulseaudio pulseaudio-alsa
+
+
+yay -S fcitx5 fcitx5-gtk  fcitx5-qt fcitx5-chinene-addons fcitx5-config-qt 
+ln -s ~/.config/fcitx5/pam_environment ~/.pam_environment 
 
 sed -i '/chromium/d' ~/xinitrc
 

@@ -17,6 +17,9 @@ yay -S acpi
 yay -S acpitool
 yay -S bc
 
+# support java
+sudo pacman -S wmname
+
 echo 'while true; do
     # Log stderror to a file
     dwm 2> ~/.dwm.log
