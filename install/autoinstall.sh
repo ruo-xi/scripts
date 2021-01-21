@@ -10,9 +10,9 @@ locale-gen
 echo 'LANG=en_US.UTF-8' > /etc/locale.conf
 
 echo yu > /etc/hostname
-echo '127.0.0.1 yu
-127.0.0.1 yu
-127.0.0.0 yu' >> /etc/hosts
+echo '127.0.0.1 localhost
+::1 localhost
+127.0.1.1 yu.localdomain yu' >> /etc/hosts
 
 passwd << EOF
 cao19981128
