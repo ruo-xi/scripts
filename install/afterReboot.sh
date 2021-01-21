@@ -5,7 +5,7 @@ mkdir software/source
 git clone https://github.com/ruo-xi/.config.git
 # config git
 sudo -S pacman -S openssh
-sudo ln -sf ~/.config.ssh ~/.ssh
+sudo ln -sf ~/.config/ssh ~/.ssh
 sudo chmod 400 ~/.ssh/id_rsa
 sudo chmod 600 ~/.ssh/id_rsa.pub
 
