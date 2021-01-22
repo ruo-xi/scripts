@@ -5,17 +5,20 @@ git clone git@github.com:ruo-xi/st.git
 cd dwm
 git checkout mydwm
 sudo make install clean
-cd ../st
-git checkout myst
-sudo make install clean
+yay -S alacritty
+
+
+# cd ../st
+# git checkout myst
+# sudo make install clean
 
 yay -S dmenu2
 
 # script
 yay -S feh
-yay -S acpi
-yay -S acpitool
-yay -S bc
+# yay -S acpi
+# yay -S acpitool
+# yay -S bc
 
 # support java
 sudo pacman -S wmname
