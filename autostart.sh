@@ -1,14 +1,18 @@
-#!/bin/bash
+# !/bin/bash
 
 /bin/bash ~/scripts/dwm-status.sh &
+
 /bin/bash ~/scripts/wp-autochange.sh &
+
 picom --experimental-backends -b
+
 setxkbmap -option caps:escape
-export _JAVA_AWT_WM_NONREPARENTING=1 
-export AWT_TOOLKIT=MToolkit
-wmname compiz
-numlockx on
+
+numlockx off 
+
 pulseaudio --deamonize
+
+fcitx5 -d
 #fcitx5&
 #picom -o 0.95 -i 0.88 --detect-rounded-corners --vsync --blur-background-fixed -f -D 5 -c -b
 #/bin/bash ~/scripts/tap-to-click.sh &
@@ -19,5 +23,9 @@ pulseaudio --deamonize
 #xfce4-volumed-pulse &
 #/bin/bash ~/scripts/run-mailsync.sh &
 
+export _JAVA_AWT_WM_NONREPARENTING=1 
+export AWT_TOOLKIT=MToolkit
+wmname compiz
 
 ~/scripts/autostart_wait.sh &
+

@@ -3,5 +3,5 @@
 while true
 do
 	bash ./dwm-status-refresh.sh
-	sleep 2000
+	sleep 1
 done

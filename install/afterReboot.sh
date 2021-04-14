@@ -65,6 +65,15 @@ yay -S rofi
 # audio 
 yay -S pulseaudio pulseaudio-alsa
 
+yay -S fcitx5
+yay -S fcitx5-rime
+yay -S fcitx5-qt
+echo 'GTK_IM_MODULE DEFAULT=fcitx
+QT_IM_MODULE  DEFAULT=fcitx
+XMODIFIERS    DEFAULT=\@im=fcitx
+SDL_IM_MODULE DEFAULT=fcitx' > ~/.pam_environment
+
+yay -S numlockx
 
 # yay -S fcitx5 fcitx5-gtk  fcitx5-qt fcitx5-chinene-addons fcitx5-config-qt 
 # ln -s ~/.config/fcitx5/pam_environment ~/.pam_environment 

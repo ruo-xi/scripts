@@ -9,3 +9,6 @@ sudo npm install -g neovim
 yay -S xclip
 npm -g install instant-markdown-d
 
+
+
+
