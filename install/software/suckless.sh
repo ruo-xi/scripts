@@ -1,4 +1,4 @@
-cd ~/software/source
+cd ~/Software/source
 
 git clone git@github.com:ruo-xi/dwm.git
 git clone git@github.com:ruo-xi/st.git

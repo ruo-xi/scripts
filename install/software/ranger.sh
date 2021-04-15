@@ -1,4 +1,5 @@
 yay -S ranger
+sudo ln -sf ~/Github/config/ranger ~/.config/ranger
 #image preview 
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 sudo pip3 install ueberzug  # yay -S ueberzug

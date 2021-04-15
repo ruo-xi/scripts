@@ -1,11 +1,11 @@
 cd ~
-mkdir software
-mkdir software/source
-
-git clone https://github.com/ruo-xi/.config.git
+mkdir Software
+mkdir Software/source
+mkdir Github
+git clone https://github.com/ruo-xi/.config.git ~/Github/config
 # config git
 sudo -S pacman -S openssh
-sudo ln -sf ~/.config/ssh ~/.ssh
+sudo ln -sf ~/Github/config/ssh ~/.ssh
 sudo chmod 400 ~/.ssh/id_rsa
 sudo chmod 600 ~/.ssh/id_rsa.pub
 
@@ -20,13 +20,15 @@ yay -S nodejs npm
 # java
 yay -S jdk11-openjdk
 
-yay -S nvidia xorg chromium v2raya xorg-xinit picom
+yay -S nvidia xorg google-chrome v2raya xorg-xinit picom
+
+sudo ln -sf ~/Github/config/picom ~/.config/picom
 
 sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc
 sed -i '/xterm/d' ~/.xinitrc
 sed -i '/xclock/d' ~/.xinitrc
 sed -i '/twm/d' ~/.xinitrc
-echo 'chromium' >> ~/.xinitrc
+echo 'google-chrome-stable' >> ~/.xinitrc
 startx
 
 # expory proxy
@@ -40,8 +42,8 @@ sh /scripts/install/software/git.sh
 
 
 # pictures
-mkdir ~/store
-git clone git@github.com:ruo-xi/picture ~/store/
+mkdir ~/Store
+git clone git@github.com:ruo-xi/picture ~/Store/
 # windows manager and terminal 
 sh /scripts/install/software/suckless.sh
 # file manager 
@@ -51,7 +53,7 @@ sh /scripts/install/software/neovim.sh
 # shell
 sh /scripts/install/software/zsh.sh
 # fuzzy finder
-sh /scripts/install/software/fzf.sh
+# sh /scripts/install/software/fzf.sh
 # file finder
 yay -S fd
 # text line finder
@@ -62,6 +64,7 @@ yay -S ccat
 yay -S alsa-utils 
 # app launcher
 yay -S rofi
+sudo ln -sf ~/Github/config/rofi ~/.config/rofi 
 # audio 
 yay -S pulseaudio pulseaudio-alsa
 
@@ -78,5 +81,4 @@ yay -S numlockx
 # yay -S fcitx5 fcitx5-gtk  fcitx5-qt fcitx5-chinene-addons fcitx5-config-qt 
 # ln -s ~/.config/fcitx5/pam_environment ~/.pam_environment 
 
-sed -i '/chromium/d' ~/xinitrc
-git clone git@github.com:ruo-xi/scripts.git
+sed -i '/google-chrome-stable/d' ~/xinitrc
