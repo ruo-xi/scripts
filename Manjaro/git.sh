@@ -6,7 +6,7 @@ sudo git config --global user.name ruo-xi
 sudo git config --global user.email 314386327@qq.com
 
 mkdir Github
-mkdir .ssh
+# mkdir .ssh
 
 cd Github
 
