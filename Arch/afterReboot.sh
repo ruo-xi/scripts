@@ -43,18 +43,19 @@ cd ~
 # sudo chmod 600 ~/.ssh/id_rsa.pub
 
 
-sh ./software/dev.sh
+sh ./go.sh
 mkdir Software
 mkdir Software/source
 sh ./software/yay.sh
+sh ./software/dev.sh
 
 # python
-yay -S python2 python2-pip python python-pip
+# yay -S python2 python2-pip python python-pip
 # nodejs
-yay -S nodejs npm
+# yay -S nodejs npm
 
 # java
-yay -S jdk11-openjdk
+# yay -S jdk11-openjdk
 
 yay -S nvidia xorg google-chrome v2raya xorg-xinit picom
 
