@@ -1,5 +1,5 @@
 
-sh go.sh
+sh ./go.sh
 yay -S nodejs npm
 yay -S python2 python2-pip
 yay -S python-pip python-pynvim

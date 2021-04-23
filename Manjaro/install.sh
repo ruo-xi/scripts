@@ -1,8 +1,8 @@
 sudo echo 'keycode 58 = Escape'
 
 sh ./git.sh 
-sh dev.sh
-sh browser.sh
+sh ./dev.sh
+sh ./browser.sh
 sh ./zsh.sh
 sh ./nvim.sh
 sh ./font-config.sh

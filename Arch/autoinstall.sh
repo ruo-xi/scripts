@@ -30,5 +30,6 @@ EOF
 
 sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/g' /etc/sudoers
 
-sudo systemctl enable --now NetworkManager
+sudo systemctl enable dhcpcd.service
+
 
