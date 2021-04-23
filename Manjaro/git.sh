@@ -29,5 +29,7 @@ cd ../scripts
 git remote remove origin
 git remote add origin git@github.com:ruo-xi/scripts.git
 
+cd ..
 git clone git@github.com:ruo-xi/note
 cd ~
+
