@@ -21,7 +21,7 @@ pacstrap /mnt base base-devel linux linux-firmware
 
 genfstab -L /mnt >> /mnt/etc/fstab
 
-cp -r  ~/scripts /mnt/scripts
+cp -r  /root/scripts /mnt/scripts
 
 arch-chroot /mnt
 

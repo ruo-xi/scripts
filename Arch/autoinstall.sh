@@ -2,7 +2,7 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 hwclock --systohc
 timedatectl set-local-rtc true # 是archlinux 使用CST时间 避免因为使用UTC与windows 冲突
 
-pacman -S neovim tfs-3g os-prober grub efibootmgr dhcpcd man man-db man-pages git 
+pacman -S neovim ntfs-3g os-prober grub efibootmgr dhcpcd man man-db man-pages git 
 
 # network wireless
 # pacman -S wpa_supplicant networkmanager n

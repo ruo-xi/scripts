@@ -1,3 +1,5 @@
+sudo pacman -S openssh
+
 # config
 git config --global user.name ruo-xi
 git config --global user.email 314386327@qq.com
@@ -5,7 +7,6 @@ git config --global user.email 314386327@qq.com
 sudo git config --global user.name ruo-xi
 sudo git config --global user.email 314386327@qq.com
 
-mkdir Github
 cd Github
 git clone https://github.com/ruo-xi/.config config
 
@@ -18,3 +19,14 @@ chmod 600 ~/.ssh/id_rsa.pub
 cd config
 git remote remove origin
 git remote add origin git@github.com:ruo-xi/.config.git
+
+
+# change scripts to ssh connection
+mv ~/scripts ~/Github/
+cd ../scripts
+git remote remove origin
+git remote add origin git@github.com:ruo-xi/scripts.git
+
+cd ..
+git clone git@github.com:ruo-xi/note
+cd ~
