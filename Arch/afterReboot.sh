@@ -1,5 +1,4 @@
 cp -r /scripts ~/scripts
-sudo rm -rf /scripts
 
 # make dir
 sh /scripts/Arch/software/dir.sh
@@ -25,28 +24,31 @@ startx
 sed -i '/google-chrome-stable/d' ~/xinitrc
 
 # expory proxy
-export https_proxy="127.0.0.1:8888"
-export http_proxy="127.0.0.1:8888"
-
+# export https_proxy="127.0.0.1:8888"
+# export http_proxy="127.0.0.1:8888"
+ 
 # shell
-sh /scripts/Arch/software/zsh.sh
+# sh /scripts/Arch/software/zsh.sh
 
 # neovim
-sh /scripts/Arch/software/neovim.sh
+# sh /scripts/Arch/software/neovim.sh
 
 # fonts
-sh /scripts/Arch/software/fonts.sh
+# sh /scripts/Arch/software/fonts.sh
 
 # windows manager and terminal 
 # sh /scripts/install/software/suckless.sh
-sh /scripts/Arch/software/wm.sh
+# sh /scripts/Arch/software/wm.sh
 
 # file manager 
-sh /scripts/Arch/software/ranger.sh
+# sh /scripts/Arch/software/ranger.sh
 
 # tools
-yay -S fd ripgrep ccat 
+# yay -S fd ripgrep ccat 
 
 
 # audio tools
-sh /scripts/Arch/software/audio.sh
+# sh /scripts/Arch/software/audio.sh
+
+
+# sudo rm -rf /scripts
