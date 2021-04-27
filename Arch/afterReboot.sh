@@ -1,64 +1,18 @@
+# make dir
+makedir Software Sofwrare/source Github Download Source
+
 sudo pacman -S openssh
-# config
-git config --global user.name ruo-xi
-git config --global user.email 314386327@qq.com
+# git 
+# need openssh 
+sh ./software/git.sh
 
-sudo git config --global user.name ruo-xi
-sudo git config --global user.email 314386327@qq.com
-
-mkdir Github
-cd Github
-git clone https://github.com/ruo-xi/.config config
-
-# config ssh
-sudo ln -sf ~/Github/config/ssh ~/.ssh
-chmod 400 ~/.ssh/id_rsa
-chmod 600 ~/.ssh/id_rsa.pub
-
-# change config to ssh connection
-cd config
-git remote remove origin
-git remote add origin git@github.com:ruo-xi/.config.git
-
-
-# change scripts to ssh connection
-mv ~/scripts ~/Github/
-cd ../scripts
-git remote remove origin
-git remote add origin git@github.com:ruo-xi/scripts.git
-
-cd ..
-git clone git@github.com:ruo-xi/note
-cd ~
-
-
-
-# cd ~
-# mkdir Github
-# git clone https://github.com/ruo-xi/.config.git ~/Github/config
-# config git
-# sudo -S pacman -S openssh
-# sudo ln -sf ~/Github/config/ssh ~/.ssh
-# sudo chmod 400 ~/.ssh/id_rsa
-# sudo chmod 600 ~/.ssh/id_rsa.pub
-
-
-sh ./go.sh
-mkdir Software
-mkdir Software/source
+sh ./software/go.sh
 sh ./software/yay.sh
 sh ./software/dev.sh
 
-# python
-# yay -S python2 python2-pip python python-pip
-# nodejs
-# yay -S nodejs npm
+yay -S nvidia xorg google-chrome v2raya xorg-xinit 
 
-# java
-# yay -S jdk11-openjdk
-
-yay -S nvidia xorg google-chrome v2raya xorg-xinit picom
-
+yay -S picom
 sudo ln -sf ~/Github/config/picom ~/.config/picom
 
 sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc
@@ -78,17 +32,17 @@ yay -S nerd-fonts-source-code-pro wqy-zenhei ttf-symbola
 sh /scripts/install/software/git.sh
 
 
+# shell
+sh ./software/zsh.sh
 # pictures
 mkdir ~/Store
 git clone git@github.com:ruo-xi/picture ~/Store/
 # windows manager and terminal 
-sh /scripts/install/software/suckless.sh
+# sh /scripts/install/software/suckless.sh
 # file manager 
 sh /scripts/install/software/ranger.sh
 # text editor
 sh /scripts/install/software/neovim.sh
-# shell
-sh /scripts/install/software/zsh.sh
 # fuzzy finder
 # sh /scripts/install/software/fzf.sh
 # file finder
