@@ -7,7 +7,7 @@ git config --global user.email 314386327@qq.com
 sudo git config --global user.name ruo-xi
 sudo git config --global user.email 314386327@qq.com
 
-cd Github
+cd ~/Github
 git clone https://github.com/ruo-xi/.config config
 
 # config ssh

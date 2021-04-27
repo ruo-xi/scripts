@@ -2,15 +2,15 @@ cp -r /scripts ~/scripts
 sudo rm -rf /scripts
 
 # make dir
-sh ./software/dir.sh
+sh /scripts/Arch/software/dir.sh
 
 # git 
 # need openssh 
-sh ./software/git.sh
+sh /scripts/Arch/software/git.sh
 
-sh ./software/go.sh
-sh ./software/yay.sh
-sh ./software/dev.sh
+sh /scripts/Arch/software/go.sh
+sh /scripts/Arch/software/yay.sh
+sh /scripts/Arch/software/dev.sh
 
 yay -S nvidia xorg-server xorg-xinit google-chrome 
 yay -S v2raya 
@@ -29,24 +29,24 @@ export https_proxy="127.0.0.1:8888"
 export http_proxy="127.0.0.1:8888"
 
 # shell
-sh ./software/zsh.sh
+sh /scripts/Arch/software/zsh.sh
 
 # neovim
-sh ./software/neovim.sh
+sh /scripts/Arch/software/neovim.sh
 
 # fonts
-sh ./software/fonts.sh
+sh /scripts/Arch/software/fonts.sh
 
 # windows manager and terminal 
 # sh /scripts/install/software/suckless.sh
-sh ./software/wm.sh
+sh /scripts/Arch/software/wm.sh
 
 # file manager 
-sh ./software/ranger.sh
+sh /scripts/Arch/software/ranger.sh
 
 # tools
 yay -S fd ripgrep ccat 
 
 
 # audio tools
-sh ./software/audio.sh
+sh /scripts/Arch/software/audio.sh

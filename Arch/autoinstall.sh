@@ -37,7 +37,7 @@ sudo systemctl enable dhcpcd.service
 
 passwd -d yu
 
-dd if=/mne/dev/zero of=/mnt/swapfile bs=1M count=16384 status=progress
+dd if=/dev/zero of=/mnt/swapfile bs=1M count=16384 status=progress
 chmod 600 /mnt/swapfile
 mkswap /mnt/swapfile
 swapon /mnt/swapfile
