@@ -12,7 +12,8 @@ sh /scripts/Arch/software/yay.sh
 sh /scripts/Arch/software/dev.sh
 
 yay -S nvidia xorg-server xorg-xinit google-chrome 
-yay -S v2raya 
+sh /scripts/Arch/software/v2ray.sh
+yay -S v2raya v2ray
 # yay -S qv2ray
 
 sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc
@@ -21,7 +22,7 @@ sed -i '/xclock/d' ~/.xinitrc
 sed -i '/twm/d' ~/.xinitrc
 echo 'google-chrome-stable' >> ~/.xinitrc
 startx
-sed -i '/google-chrome-stable/d' ~/xinitrc
+sed -i '/google-chrome-stable/d' ~/.xinitrc
 
 # expory proxy
 # export https_proxy="127.0.0.1:8888"
@@ -34,7 +35,7 @@ sed -i '/google-chrome-stable/d' ~/xinitrc
 # sh /scripts/Arch/software/neovim.sh
 
 # fonts
-# sh /scripts/Arch/software/fonts.sh
+# sh /scripts/common/fonts.sh
 
 # windows manager and terminal 
 # sh /scripts/install/software/suckless.sh
@@ -50,5 +51,7 @@ sed -i '/google-chrome-stable/d' ~/xinitrc
 # audio tools
 # sh /scripts/Arch/software/audio.sh
 
+# code-server
+# sh /scripts/Arch/software/code-server.sh
 
 # sudo rm -rf /scripts

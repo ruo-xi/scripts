@@ -1,14 +1,14 @@
 sudo echo 'keycode 58 = Escape'
 
-sh ./git.sh 
-sh ./dev.sh
-sh ./browser.sh
-sh ./zsh.sh
-sh ./nvim.sh
-sh ./font-config.sh
-sh ./wm.sh
-sh ./ranger.sh
-sh ./audio.sh
+sh /scripts/Manjaro/git.sh 
+sh /scripts/Manjaro/dev.sh
+sh /scripts/Manjaro/browser.sh
+sh /scripts/Manjaro/zsh.sh
+sh /scripts/Manjaro/nvim.sh
+sh /scripts/common/fonts.sh
+sh /scripts/Manjaro/wm.sh
+sh /scripts/Manjaro/ranger.sh
+sh /scripts/Manjaro/audio.sh
 
 # yay -S xorg-xev
 # setxkbmap -option caps:escape

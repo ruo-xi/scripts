@@ -1,4 +1,4 @@
-mkdir ~/Software
+mkdir ~/Software ~/Software/source
 mkdir ~/Github
 mkdir ~/Download 
 mkdir ~/Source

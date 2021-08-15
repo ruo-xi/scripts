@@ -19,7 +19,7 @@ sudo ln -sf ~/Github/config/alacritty ~/.config/alacritty
 yay -S feh
 
 # application runner
-yay -S rofi ~/Github/config/rofi ~/.config/rofi
+sudo ln -sf  ~/Github/config/rofi ~/.config/rofi
 yay -S rofi
 
 # num lcok

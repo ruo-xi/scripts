@@ -1,6 +1,6 @@
 # export https_proxy="127.0.0.1:8888"
 # export http_proxy="127.0.0.1:8888"
-yay -S nerd-fonts-source-code-pro wqy-zenhei ttf-symbola
+yay -S nerd-fonts-source-code-pro wqy-zenhei ttf-symbola ttf-font-awesome
 ln -sf ~/Github/config/fontconfig ~/.config/fontconfig
 
 yay -S fcitx5 fcitx5-rime fcitx5-config-qt fcitx5-gtk

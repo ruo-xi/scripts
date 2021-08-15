@@ -5,10 +5,7 @@ yay -S alsa-utils
 # aplay -l    
 # amixer -D pulse sset Master 5%+
 yay -S pulseaudio pulseaudio-alsa
-sudo systemctl --user enable --now pulseaudio.service
-
-
-
+# sudo systemctl --user enable --now pulseaudio.service
 # config with pacmd pactl
 # pacmd list-sources | grep -e 'index:' -e device.string -e 'name:'
 # pacmd list-sinks | grep -e 'name:' -e 'index:'
