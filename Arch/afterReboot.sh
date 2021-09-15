@@ -13,7 +13,7 @@ sh /scripts/Arch/software/dev.sh
 
 yay -S nvidia xorg-server xorg-xinit google-chrome 
 sh /scripts/Arch/software/v2ray.sh
-yay -S v2raya v2ray
+# yay -S v2raya v2ray
 # yay -S qv2ray
 
 sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc

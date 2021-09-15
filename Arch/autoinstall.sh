@@ -24,6 +24,9 @@ cao19981128
 cao19981128
 EOF
 
+sed -i 's/GRUB_DEFAULT=0/GRUB_DEFAULT=saved/g' /etc/default/grub
+sed -i 's/#GRUB_SAVEDEFAULT=true/GRUB_SAVEDEFAULT=true/g' /etc/default/grub
+sed -i -e '1a\GRUB_DISABLE_OS_PROBER=false' /etc/default/grub
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
