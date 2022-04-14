@@ -1,28 +1,28 @@
-cp -r /scripts ~/scripts
+
+# cp -r /scripts ~/scripts
 
 # make dir
-sh /scripts/Arch/software/dir.sh
-
+sh ./software/dir.sh
+sh ./software/keycode.sh
 # git 
 # need openssh 
-sh /scripts/Arch/software/git.sh
+sh ./software/git.sh
 
-sh /scripts/Arch/software/go.sh
-sh /scripts/Arch/software/yay.sh
-sh /scripts/Arch/software/dev.sh
+sh ./software/go.sh
+sh ./software/yay.sh
+sh ./software/dev.sh
 
-yay -S nvidia xorg-server xorg-xinit google-chrome 
-sh /scripts/Arch/software/v2ray.sh
+sh ./software/clash.sh
+sh ./software/zsh.sh
+sh ./software/neovim.sh
+sh ./software/ranger.sh
+
+
+
+# sh ./software/v2ray.sh
 # yay -S v2raya v2ray
 # yay -S qv2ray
 
-sudo cp /etc/X11/xinit/xinitrc ~/.xinitrc
-sed -i '/xterm/d' ~/.xinitrc
-sed -i '/xclock/d' ~/.xinitrc
-sed -i '/twm/d' ~/.xinitrc
-echo 'google-chrome-stable' >> ~/.xinitrc
-startx
-sed -i '/google-chrome-stable/d' ~/.xinitrc
 
 # expory proxy
 # export https_proxy="127.0.0.1:8888"

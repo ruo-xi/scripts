@@ -23,3 +23,10 @@ yay -S pulseaudio pulseaudio-alsa
 # Sound server (e.g. aRts, ESD, JACK, PulseAudio)
 # Sound subsystem (described as kernel modules or drivers; e.g. OSS, ALSA)
 # Operating system kernel (e.g. Linux, Unix)
+
+
+
+### JACK2
+# yay -S jack2
+# yay -S lib32-jack2
+

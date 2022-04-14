@@ -1,10 +1,10 @@
 ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
-timedatectl set-ntp true 
-timedatectl set-local-rtc true # 是archlinux 使用CST时间 避免因为使用UTC与windows 冲突
-hwclock --systohc
+# timedatectl set-ntp true 
+# timedatectl set-local-rtc true # 是archlinux 使用CST时间 避免因为使用UTC与windows 冲突
+# hwclock --systohc
 
-pacman -S neovim ntfs-3g os-prober grub efibootmgr dhcpcd man man-db man-pages git 
+pacman -S neovim ntfs-3g os-prober grub efibootmgr dhcpcd man man-db man-pages git networkmanager
 
 # network wireless
 # pacman -S wpa_supplicant networkmanager n
@@ -31,16 +31,18 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
 useradd -m -G wheel yu
+
 passwd yu << EOF
 cao19981128
 cao19981128
 EOF
 
-sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/g' /etc/sudoers
+sed -i 's/# %wheel ALL/%wheel ALL/g' /etc/sudoers
 
 sudo systemctl enable dhcpcd.service
 
 passwd -d yu
+
 
 dd if=/dev/zero of=/mnt/swapfile bs=1M count=16384 status=progress
 chmod 600 /mnt/swapfile
