@@ -1,5 +1,5 @@
 mkdir ~/.config/nvim
-ln -s ~/Github/config/nvim/* ~/.config/nvim/
+ln -s ~/Github/config/nvim-lua/* ~/.config/nvim/
 # yay -S neovim xclip
 
 # pip install neovim 

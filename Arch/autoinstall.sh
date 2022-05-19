@@ -6,6 +6,8 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 pacman -S neovim ntfs-3g os-prober grub efibootmgr dhcpcd man man-db man-pages git networkmanager
 
+systemctl enable --now NetworkManager.service
+
 # network wireless
 # pacman -S wpa_supplicant networkmanager n
 
