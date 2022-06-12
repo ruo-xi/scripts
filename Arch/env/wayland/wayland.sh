@@ -8,3 +8,7 @@ yay -S wl-clipboard
 # suppory eletron application for per user
 echo '--enable-features=UseOzonePlatform
 --ozone-platform=wayland' | tee -a ~/.config/electron-flags.conf
+
+# QT
+yay -S qt5-wayland qt6-wayland
+# echo 'QT_QPA_PLATFORM="wayland;xcb"' | tee -a ~/.pam_environment

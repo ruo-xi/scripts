@@ -6,11 +6,13 @@
 sh ./nvidia.sh
 sh ./wayland.sh
 
-yay -S waybar
-mkdir ~/.config/waybar
-ln -s ~/Github/config/waybar/* ~/.config/waybar/
+yay -S sway swaybg
 
-yay -S swaylock-effects
+yay -S waybar 
+mkdir ~/.config/waybar
+ln -s ~/Github/config/waybar-sway/* ~/.config/waybar/
+
+yay -S swaylock
 yay -S swayidle
 
 # mkdir ~/.config/sway
