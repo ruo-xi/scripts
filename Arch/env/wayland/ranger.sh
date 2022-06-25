@@ -1,4 +1,4 @@
-yay -S ranger
+yay -S ranger-sixel libsixel
 mkdir ~/.config/ranger
 ln -s ~/Github/config/ranger/* ~/.config/ranger/
 

@@ -12,6 +12,7 @@ systemctl enable --now NetworkManager.service
 # pacman -S wpa_supplicant networkmanager n
 
 sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
+sed -i 's/#zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/g' /etc/locale.gen
 # sed -i 's/#zh_CN.UTF-8 UTF-8/zh-CN.UTF_8 UTF-8/g' /etc/locale.gen
 locale-gen
 echo 'LANG=en_US.UTF-8' > /etc/locale.conf
