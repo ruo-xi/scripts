@@ -2,20 +2,25 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 
 # timedatectl set-ntp true 
 # timedatectl set-local-rtc true # 是archlinux 使用CST时间 避免因为使用UTC与windows 冲突
-# hwclock --systohc
+hwclock --systohc
 
-pacman -S neovim ntfs-3g os-prober grub efibootmgr dhcpcd man man-db man-pages git networkmanager
+pacman -S neovim dhcpcd man man-db man-pages git networkmanager
+pacman -S ntfs-3g  
+pacman -S grub efibootmgr os-prober
 
 systemctl enable --now NetworkManager.service
+sudo systemctl enable dhcpcd.service
 
 # network wireless
-# pacman -S wpa_supplicant networkmanager n
+# pacman -S wpa_supplicant  n
 
 sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/g' /etc/locale.gen
-sed -i 's/#zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/g' /etc/locale.gen
-# sed -i 's/#zh_CN.UTF-8 UTF-8/zh-CN.UTF_8 UTF-8/g' /etc/locale.gen
+# sed -i 's/#zh_CN.UTF-8 UTF-8/zh_CN.UTF-8 UTF-8/g' /etc/locale.gen
+
 locale-gen
 echo 'LANG=en_US.UTF-8' > /etc/locale.conf
+# echo 'LANG=zh_CN.UTF-8' > /etc/locale.conf
+
 
 echo yu > /etc/hostname
 echo '127.0.0.1 localhost
@@ -42,10 +47,7 @@ EOF
 
 sed -i 's/# %wheel ALL/%wheel ALL/g' /etc/sudoers
 
-sudo systemctl enable dhcpcd.service
-
 passwd -d yu
-
 
 dd if=/dev/zero of=/mnt/swapfile bs=1M count=16384 status=progress
 chmod 600 /mnt/swapfile
