@@ -45,6 +45,10 @@ cao19981128
 cao19981128
 EOF
 
+echo 'keycode 58 = Escape' | tee -a /etc/.keystring
+echo 'KEYMAP=/etc/.keystrings'|sudo tee -a /etc/vconsole.conf
+sudo loadkeys ~/.keystrings
+
 sed -i 's/# %wheel ALL/%wheel ALL/g' /etc/sudoers
 
 passwd -d yu
