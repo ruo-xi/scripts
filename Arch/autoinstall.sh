@@ -4,9 +4,15 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 # timedatectl set-local-rtc true # 是archlinux 使用CST时间 避免因为使用UTC与windows 冲突
 hwclock --systohc
 
-pacman -S neovim dhcpcd man man-db man-pages git networkmanager
-pacman -S ntfs-3g  
+sed -i '1i\ Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch' /etc/pacman.d/mirrorlist
+sed -i '1a\ Server = https://mirrors.urbanwave.co.za/archlinux/$repo/os/$arch' /etc/pacman.d/mirrorlist
+sed -i '1i\ Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' /etc/pacman.d/mirrorlist
+
+pacman -S neovim dhcpcd man man-db man-pages git networkmanager 
+#pacman -S ntfs-3g  
 pacman -S grub efibootmgr os-prober
+pacman -S wget
+pacman -S amd-ucode
 
 systemctl enable --now NetworkManager.service
 sudo systemctl enable dhcpcd.service
@@ -45,9 +51,9 @@ cao19981128
 cao19981128
 EOF
 
-echo 'keycode 58 = Escape' | tee -a /etc/.keystring
-echo 'KEYMAP=/etc/.keystrings'|sudo tee -a /etc/vconsole.conf
-sudo loadkeys ~/.keystrings
+# echo 'keycode 58 = Escape' | tee -a /etc/.keystring
+# echo 'KEYMAP=/etc/.keystrings'|sudo tee -a /etc/vconsole.conf
+# sudo loadkeys ~/.keystrings
 
 sed -i 's/# %wheel ALL/%wheel ALL/g' /etc/sudoers
 

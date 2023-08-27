@@ -1,4 +1,4 @@
-# setfont /usr/share/kbd/consolefonts/
+
 # loadkeys
 # nvim keys.conf
 
@@ -25,8 +25,8 @@ sed -i '1i\ Server = https://mirrors.aliyun.com/archlinux/$repo/os/$arch' /etc/p
 sed -i '1a\ Server = https://mirrors.urbanwave.co.za/archlinux/$repo/os/$arch' /etc/pacman.d/mirrorlist
 sed -i '1i\ Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch' /etc/pacman.d/mirrorlist
 
-# pacman -Sy archlinux-keyring
-sudo pcaman -Sy
+# sudo pcaman -Sy
+# pacman -S archlinux-keyring
 
 pacstrap /mnt linux base base-devel  linux-firmware 
 
@@ -34,5 +34,5 @@ pacstrap /mnt linux base base-devel  linux-firmware
 
 arch-chroot /mnt
 
-genfstab -L /mnt >> /mnt/etc/fstab
+genfstab -U /mnt >> /mnt/etc/fstab
 
